@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class ApplicationController < ActionController::Base
   def new
   end
 

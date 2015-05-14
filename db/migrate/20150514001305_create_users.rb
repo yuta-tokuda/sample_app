@@ -1,10 +1,10 @@
-class AddIndexToUsersEmail < ActiveRecord::Migration
+class CreateUsers < ActiveRecord::Migration
   def change
-    add_index :users, :email, unique: true
-  end
-end
-class AddPasswordDigestToUsers < ActiveRecord::Migration
-  def change
-    add_column :users, :password_digest, :string
+    create_table :users do |t|
+      t.string :name
+      t.string :email
+
+      t.timestamps
+    end
   end
 end
